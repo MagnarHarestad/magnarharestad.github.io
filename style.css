@@ -1,0 +1,31 @@
+:root { --bg:#121212; --surface:#1d1d20; --border:#2e2e33; --text:#e1e1e1; --dim:#9a9aa1; --accent:#588cff; --gold:#ffc83c; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif; }
+a { color:var(--accent); }
+code { background:rgba(255,255,255,.07); padding:1px 5px; border-radius:4px; font-size:.9em; }
+.wrap { max-width:860px; margin:0 auto; padding:0 20px; }
+header { border-bottom:1px solid var(--border); }
+header .wrap { display:flex; align-items:center; gap:12px; height:64px; }
+header img { width:32px; height:32px; }
+header .brand { font-weight:600; font-size:18px; color:#fff; text-decoration:none; }
+header nav { margin-left:auto; display:flex; gap:18px; font-size:14px; }
+header nav a { color:var(--dim); text-decoration:none; }
+header nav a:hover { color:#fff; }
+.hero { text-align:center; padding:64px 0 40px; }
+.hero img { width:128px; height:128px; }
+.hero h1 { font-size:40px; margin:18px 0 8px; color:#fff; }
+.hero p { color:var(--dim); font-size:19px; max-width:640px; margin:0 auto; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:14px; margin:32px 0 56px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 20px; }
+.card h3 { margin:0 0 6px; font-size:16px; color:#fff; }
+.card p { margin:0; color:var(--dim); font-size:14.5px; }
+.card .i { font-size:20px; margin-bottom:6px; }
+article { padding:40px 0 64px; }
+article h1 { color:#fff; margin-bottom:4px; }
+article .updated { color:var(--dim); margin-top:0; }
+article h2 { color:#fff; font-size:20px; margin-top:32px; }
+article li { margin:4px 0; }
+.note { background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:10px; padding:12px 16px; }
+footer { border-top:1px solid var(--border); color:var(--dim); font-size:13px; }
+footer .wrap { padding:20px; display:flex; gap:16px; flex-wrap:wrap; }
+footer a { color:var(--dim); }
