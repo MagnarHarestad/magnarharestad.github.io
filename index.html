@@ -10,19 +10,31 @@
 </head>
 <body>
 <header><div class="wrap"><img src="favicon.png" alt=""><a class="brand" href="./">MagMail</a>
-  <nav><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
+  <nav><a href="./">Home</a><a href="./#download">Download</a><a href="setup.html">Setup</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
 
 <main class="wrap">
   <section class="hero">
     <img src="logo.png" alt="MagMail logo">
     <h1>MagMail</h1>
-    <p>A modern, security-focused Gmail client for Windows, with Claude built in to help sort, find, summarize and draft your mail.</p>
+    <p>A modern, security-focused Gmail client for Windows, with an AI assistant built in to help sort, find, summarize and draft your mail. It runs free and private on your own PC, or on Claude.</p>
+    <p class="cta"><a class="button" href="#download">Download MagMail 1.1.0</a></p>
   </section>
   <section class="grid">
     <div class="card"><div class="i">💬</div><h3>Conversations, not lists</h3><p>Threads read top to bottom with a timeline of who wrote when. Replies open right under the message you're answering.</p></div>
     <div class="card"><div class="i">🏷️</div><h3>Labels as folders</h3><p>Your Gmail labels as a folder tree, with drag-and-drop sorting. Labels can also be mirrored to local folders on your PC.</p></div>
-    <div class="card"><div class="i">✨</div><h3>Claude assistant</h3><p>Ask Claude to find what needs a reply, sort your inbox, summarize threads or write reports. It always asks before changing anything and can never send mail.</p></div>
+    <div class="card"><div class="i">✨</div><h3>AI assistant</h3><p>Find what needs a reply, sort your inbox, summarize threads, draft answers and write reports. It runs on a free local model (Ollama, mail never leaves your PC) or on Claude, always asks before changing anything, and can never send mail.</p></div>
     <div class="card"><div class="i">🔒</div><h3>Private by design</h3><p>Sign in with Google OAuth, never a password. Tokens and cached mail are encrypted on your PC, and there is no MagMail server.</p></div>
+  </section>
+  <section id="download" class="download">
+    <h2>Download MagMail 1.1.0</h2>
+    <p>For Windows 10 and 11 (64-bit). No installation and no .NET needed: unzip it anywhere and run <code>MagMail.exe</code>.</p>
+    <p><a class="button" href="https://github.com/MagnarHarestad/magnarharestad.github.io/releases/latest/download/MagMail-win-x64.zip">⬇ MagMail-win-x64.zip</a> <span class="meta">Version 1.1.0 · 54 MB</span></p>
+    <ul class="facts">
+      <li><strong>First start:</strong> MagMail connects to Gmail with your own free Google OAuth client. Follow the <a href="setup.html">setup guide</a>; it takes about 10 minutes, once.</li>
+      <li><strong>Windows SmartScreen</strong> may warn that the app is from an unknown publisher, because it isn't code-signed. Click <em>More info → Run anyway</em> if the checksum below matches.</li>
+      <li><strong>Needs</strong> the Microsoft Edge WebView2 Runtime, which is already on Windows 11 and up-to-date Windows 10.</li>
+    </ul>
+    <p class="meta">SHA-256 of the zip, to check that your download is intact:<br><code class="sha">45C6C735641E26EEC3107698E3CF5DF3587EB0F57533E91ADF8D6A75B6DF3B1C</code><br>In PowerShell: <code>Get-FileHash .\MagMail-win-x64.zip</code></p>
   </section>
 </main>
 

@@ -29,3 +29,16 @@ article li { margin:4px 0; }
 footer { border-top:1px solid var(--border); color:var(--dim); font-size:13px; }
 footer .wrap { padding:20px; display:flex; gap:16px; flex-wrap:wrap; }
 footer a { color:var(--dim); }
+
+.button { display:inline-block; background:var(--accent); color:#fff; font-weight:600; padding:10px 18px; border-radius:10px; text-decoration:none; }
+.button:hover { filter:brightness(1.1); }
+.cta { margin-top:22px; }
+.download { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:22px 24px; margin:0 0 56px; }
+.download h2 { margin:0 0 6px; color:#fff; }
+.download .meta, .meta { color:var(--dim); font-size:14px; margin-left:8px; }
+.download p.meta { margin-left:0; }
+.facts { color:var(--dim); font-size:14.5px; padding-left:20px; }
+.facts strong { color:var(--text); }
+code.sha { font-size:12px; word-break:break-all; }
+.steps li { margin:8px 0; }
+pre { background:#0d0d0f; border:1px solid var(--border); border-radius:8px; padding:10px 12px; overflow:auto; }

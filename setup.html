@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setup - MagMail</title>
+<meta name="description" content="MagMail - a secure, modern Gmail client for Windows with Claude built in.">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><img src="favicon.png" alt=""><a class="brand" href="./">MagMail</a>
+  <nav><a href="./">Home</a><a href="./#download">Download</a><a href="setup.html">Setup</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
+
+<main class="wrap"><article>
+<h1>Setting up MagMail</h1>
+<p class="updated">For MagMail 1.1 on Windows 10/11 (64-bit)</p>
+
+<h2>1. Run MagMail</h2>
+<ol class="steps">
+  <li>Download <a href="./#download">MagMail-win-x64.zip</a> and unzip it, e.g. to <code>C:\Programs\MagMail</code>.</li>
+  <li>Start <code>MagMail.exe</code>. If SmartScreen warns about an unknown publisher, click <em>More info → Run anyway</em>.</li>
+</ol>
+
+<h2>2. Connect Gmail (one time, about 10 minutes)</h2>
+<p>MagMail never asks for your Gmail password. You sign in on Google's own page, and you use your <strong>own</strong> free Google Cloud OAuth client, so no third party is involved.</p>
+<ol class="steps">
+  <li>In <a href="https://console.cloud.google.com/">Google Cloud Console</a>, create a project and <a href="https://console.cloud.google.com/apis/library/gmail.googleapis.com">enable the Gmail API</a>.</li>
+  <li>Open <a href="https://console.cloud.google.com/auth/overview">Google Auth Platform</a> and configure it: app name <em>MagMail</em>, user type <em>External</em>, your e-mail as support and developer contact.</li>
+  <li>Under <strong>Audience</strong>, add your Gmail address as a <em>Test user</em>. To avoid having to sign in again every 7 days, click <strong>Publish app</strong> instead. For personal use no Google verification is needed; you'll just see an "unverified app" notice when signing in.</li>
+  <li>Under <strong>Clients</strong>, create an OAuth client of type <strong>Desktop app</strong> and download its JSON file.</li>
+  <li>In MagMail, click <strong>Import client JSON…</strong>, pick the file, then <strong>Sign in with Google</strong>. On the "Google hasn't verified this app" screen, choose <em>Advanced → Go to MagMail</em> and allow access.</li>
+</ol>
+
+<h2>3. AI assistant (optional)</h2>
+<p><strong>Local and free (default).</strong> Install <a href="https://ollama.com">Ollama</a> and the Qwen3 14B model in PowerShell. Reopen PowerShell after the first command:</p>
+<pre>winget install --id Ollama.Ollama -e
+ollama pull qwen3:14b</pre>
+<p>The model is about 9 GB and works best with an NVIDIA GPU with 12 GB of memory. In MagMail, open <strong>Settings → AI assistant → Test connection</strong>. With the local model, no mail ever leaves your PC.</p>
+<p><strong>Claude.</strong> Choose <em>Claude via the Anthropic API</em> in Settings and paste an API key from <a href="https://console.anthropic.com/">console.anthropic.com</a> (pay per use; a Claude Pro subscription doesn't include API access).</p>
+
+<h2>Where MagMail keeps things</h2>
+<ul>
+  <li>Settings: <code>%APPDATA%\MagMail</code>. Login, OAuth client and API key are encrypted (Windows DPAPI) in its <code>secure</code> folder.</li>
+  <li>Encrypted mail cache: <code>%LOCALAPPDATA%\MagMail</code>.</li>
+  <li>To remove everything: <em>Settings → Sign out &amp; revoke access</em>, then delete the MagMail folder and those two folders.</li>
+</ul>
+</article></main>
+
+<footer><div class="wrap"><span>© 2026 Magnar Harestad · Censor Design</span><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="https://github.com/MagnarHarestad">Contact (GitHub)</a></div></footer>
+</body>
+</html>
